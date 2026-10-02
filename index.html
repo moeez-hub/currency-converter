@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="./output.css" rel="stylesheet" />
+    <title>Currency Converter</title>
+  </head>
+  <body class="bg-olive-600 flex justify-center items-center min-h-screen">
+    <div class="border-4 w-[500px] mx-auto bg-white p-6 rounded-lg text-center">
+      <h1>Currency Converter</h1>
+      <br /><br />
+      <p>Enter Amount</p>
+      <input id="amount" type="number" class="border-2 rounded p-1" />
+      <br /><br />
+
+      <div class="flex justify-center items-center gap-17">
+        <div class="flex flex-col items-center">
+          <img id="fromFlag" src="https://flagsapi.com/PK/flat/64.png" alt="" />
+          <label>From</label>
+          <select id="from" class="border-2 rounded p-1 mt-1">
+            <option value="PKR">PKR</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CNY">CNY</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <img id="toFlag" src="https://flagsapi.com/US/flat/64.png" alt="" />
+          <label>To</label>
+          <select id="to" class="border-2 rounded p-1 mt-1">
+            <option value="PKR">PKR</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CNY">CNY</option>
+          </select>
+        </div>
+      </div>
+
+      <br /><br />
+      <p id="result">1 usd is equal to 280 pkr</p>
+      <br />
+      <input
+        id="exchangeBtn"
+        class="border-2 py-1.5 w-[200px] rounded-[10px] bg-orange-500 text-white hover:bg-amber-700 cursor-pointer"
+        type="button"
+        value="Click for exchange"
+      />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
