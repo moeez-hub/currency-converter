@@ -40,9 +40,9 @@ buttonEl.addEventListener("click", async function () {
     const rate = data.rates[toEl.value];
     const total = (amount * rate).toFixed(2);
 
-    //     console.log(data);
-    // console.log(rate);
-    // console.log(total);
+        console.log(data);
+    console.log(rate);
+    console.log(total);
 
     resultEl.innerText = `${amount} ${fromEl.value} = ${total} ${toEl.value}`;
   } catch (error) {
