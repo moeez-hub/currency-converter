@@ -40,9 +40,9 @@ buttonEl.addEventListener("click", async function () {
     const rate = data.rates[toEl.value];
     const total = (amount * rate).toFixed(2);
 
-    //     console.log(data);
-    // console.log(rate);
-    // console.log(total);
+        console.log(data);
+    console.log(rate);
+    console.log(total);
 
     resultEl.innerText = `${amount} ${fromEl.value} = ${total} ${toEl.value}`;
   } catch (error) {
@@ -55,5 +55,16 @@ fromEl.addEventListener("change", function () {
 });
 
 toEl.addEventListener("change", function () {
+  toFlag.src = `https://flagsapi.com/${countries[toEl.value]}/flat/64.png`;
+});
+
+const swapBtn = document.getElementById("swapBtn");
+swapBtn.addEventListener("click", function () {
+  
+  const temp = fromEl.value;
+  fromEl.value = toEl.value;
+  toEl.value = temp;
+
+  fromFlag.src = `https://flagsapi.com/${countries[fromEl.value]}/flat/64.png`;
   toFlag.src = `https://flagsapi.com/${countries[toEl.value]}/flat/64.png`;
 });
